@@ -9,6 +9,7 @@ RUN yum install -y python-pip
 RUN pip install supervisor
 RUN mkdir /etc/supervisord.d/
 ADD supervisord.conf /etc/supervisord.conf
+ADD environment.sh /environment.sh
 
 RUN yum clean all
 
