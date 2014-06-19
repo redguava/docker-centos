@@ -7,3 +7,4 @@ RUN yum install -y git golang && git clone https://github.com/coreos/etcdctl /bu
 
 RUN yum clean all
 
+RUN useradd redguava
