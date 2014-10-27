@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN yum localinstall -y http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+RUN yum localinstall -y http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
 
 RUN yum install -y git golang tar &&\
   git clone https://github.com/coreos/etcdctl /build &&\
