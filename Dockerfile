@@ -8,5 +8,5 @@ RUN yum install -y git golang tar &&\
   rm -rf /build &&\
   yum clean all
 
-RUN curl -L https://github.com/kelseyhightower/confd/releases/download/v0.6.3/confd-0.6.3-linux-amd64 -o /usr/local/bin/confd &&\
+RUN curl -L https://github.com/kelseyhightower/confd/releases/download/v0.7.0-beta1/confd-0.7.0-linux-amd64 -o /usr/local/bin/confd &&\
   chmod +x /usr/local/bin/confd && mkdir -p /etc/confd/{conf.d,templates}
