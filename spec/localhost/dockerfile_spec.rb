@@ -11,6 +11,11 @@ describe 'confd' do
     expect(executable).to be_executable.by_user('root')
   end
 
+  it 'supports ETCDCTL_PEERS' do
+    confd_command = command('ETCDCTL_PEERS=my.ip confd 2>&1 | grep "my.ip"')
+    expect(confd_command.exit_status).to eq 0
+  end
+
   it 'has conf.d folder created' do
     expect(file '/etc/confd/conf.d').to be_directory
   end
